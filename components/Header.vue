@@ -55,6 +55,9 @@
             <li><a class="dropdown-item" href="/alokasi/wd">WANGUNDIREJA</a></li>
           </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/iksi">IKSI</a>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,16 +1,35 @@
 <template>
-    <div class="card mb-3" style="max-width: 540px;">
-                                        <div class="row g-0">
-                                                  <div class="col-md-4">
-                                                            <img src="assets/img/parakanhaji.JPG"
-                                                                      class="img-fluid rounded-start" alt="...">
-                                                  </div>
-                                                  <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                      <h5 class="card-title">BENDUNG PARAKANHAJI</h5>
-                                                                      <p class="card-text">...</p>
-                                                            </div>
-                                                  </div>
-                                        </div>
+  <div class="judul m-5 text-center">
+      <h2>BENDUNG PARAKANHAJI</h2>
+  </div> 
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <img src="assets/img/parakanhaji2.jpg" class="img-fluid rounded-start" alt="..." style="width: 18rem; height: 18rem;">
+          </div> 
+          <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <p class="card-text">Gambaran Umum</p>
+                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
+                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
+                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
+                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> 
+      <div class="card mb-3">
+            <img src="assets/img/Parakanhaji 2020-09-01 at 07.57.40 (1).jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                        <h3 class="card-text">Daerah Irigasi Parakanhaji Kab Tasik dan Ciamis</h3>
+                        <p class="card-text"><small class="text-body-black">Luas Layanan: 127 (ha)</small></p>
+                        <p class="card-text"><small class="text-body-black">Melintasi: Desa Cidolog, Kec. Cidolog </small></p>
+                        <p class="card-text"><small class="text-body-black">Melintasi: Desa Sirnajaya, Kec. Karangjaya </small></p>
+                </div>
+        </div>
   </div>
 </template>

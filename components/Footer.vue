@@ -8,7 +8,7 @@
             UPTD PSDA IRIGASI
           </span>
           <br>
-          Jl. RAA. Wiratanuningrat No.3, Empangsari, Kec. Tawang, Kab. Tasikmalaya, Jawa Barat
+          Jl. RAA. Wiratanuningrat No.3, Tawangsari, Kec. Tawang, Kab. Tasikmalaya, Jawa Barat
           <br>
           Kota Tasikmalaya 46113.
         </div>
