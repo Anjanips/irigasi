@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-primary-subtle bg-body-tertiary sticky-top">
+  <nav class="navbar navbar-expand-lg bg-success-subtle bg-body-tertiary sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <div class="align-items-center">

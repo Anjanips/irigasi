@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td><img src="assets/img/cimulu(1).jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/cimulu(1).jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Cimulu</td>
                 <td>1.546,2</td>
                 <td>1=cukup</td>
@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td><img src="assets/img/cigede(1).jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/cigede(1).jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Cigede</td>
                 <td>542</td>
                 <td>1=cukup</td>
@@ -58,7 +58,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td><img src="assets/img/muhara.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/muhara.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Muhara</td>
                 <td>542</td>
                 <td>1=cukup</td>
@@ -75,7 +75,7 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td><img src="assets/img/baranangsiang(1).jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/baranangsiang(1).jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Baranangsiang</td>
                 <td>182,77</td>
                 <td>1=cukup</td>
@@ -92,13 +92,13 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td><img src="assets/img/cikembang(1).jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/cikembang(1).jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Cikembang</td>
                 <td>653</td>
                 <td>1=cukup</td>
                 <td>-</td>
                 <td>182,77</td>
-                <td>653</td>
+                <td>-</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
@@ -108,13 +108,13 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td><img src="assets/img/ciputrahaji.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/ciputrahaji.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Ciputrahaji</td>
                 <td>1.258,10</td>
                 <td>1=cukup</td>
                 <td>-</td>
                 <td>1.258,10</td>
-                <td>653</td>
+                <td>-</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
@@ -124,7 +124,7 @@
             </tr>
             <tr>
                 <td>7</td>
-                <td><img src="assets/img/0_B. GPI 0-Bendung Gunung Putri.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/0_B. GPI 0-Bendung Gunung Putri.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Gunung Putri</td>
                 <td>469,63</td>
                 <td>1=cukup</td>
@@ -140,7 +140,7 @@
             </tr>
             <tr>
                 <td>8</td>
-                <td><img src="assets/img/wd.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/wd.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Wangundireja</td>
                 <td>217</td>
                 <td>1=cukup</td>
@@ -156,7 +156,7 @@
             </tr>
             <tr>
                 <td>9</td>
-                <td><img src="assets/img/laksanaharja2.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/laksanaharja2.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Laksanaharja</td>
                 <td>274,50</td>
                 <td>1=cukup</td>
@@ -172,7 +172,7 @@
             </tr>
             <tr>
                 <td>10</td>
-                <td><img src="assets/img/parakanhaji2.jpg" width="30%" height="auto" alt=""></td>
+                <td><img src="assets/img/parakanhaji2.jpg" width="150px" height="auto" alt=""></td>
                 <td>Di Parakanhaji</td>
                 <td>127</td>
                 <td>1=cukup</td>

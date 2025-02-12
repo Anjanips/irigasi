@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-primary-subtle">
-    <div class="container text-start pb-4 bg-primary-subtle p-3">
+  <div class="bg-success-subtle">
+    <div class="container text-start pb-4 bg-success-subtle p-3">
       <div class="row d-flex justify-content-around">
         <div class="col-lg-5 ps-5 ms-4">
           <h3>Hubungi Kami</h3>
