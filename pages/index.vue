@@ -1,7 +1,7 @@
 <template>
-  <section class="sambutan-container d-flex align-items-center mt-4">
+  <section class="sambutan-container d-flex align-items-center mt-4 ">
       <div class="sambutan-wrapper p-4 rounded-4 shadow-sm "> 
-        <!-- Foto kepala sekolah -->
+        <!-- Logo -->
         <div class="photo-container me-4"> 
           <img src="assets/img/logopemda.png" alt="logo" class="photo" />
         </div>
@@ -16,8 +16,8 @@
           </p>
         </div>
       </div>
-    </section>
-    <div class="container pt-5"> <!-- Mengurangi padding-top di container -->
+  </section>
+    <div class="container pt-4"> <!-- Mengurangi padding-top di container -->
       <div class="row justify-content-center">
         <div class="col">
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -47,38 +47,18 @@
             </div>
   
             <!-- Tombol navigasi -->
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon rounded-5 bg-secondary" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon rounded-5 bg-secondary" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button> -->
+            </button>
           </div>
         </div>
       </div>
     </div>
-  
-    <!-- Seksi sambutan -->
-    <!-- <section class="sambutan-container d-flex align-items-center mt-4">
-      <div class="sambutan-wrapper p-4 rounded-4 shadow-sm ">  -->
-        <!-- Foto kepala sekolah -->
-        <!-- <div class="photo-container me-4"> 
-          <img src="assets/img/logopemda.png" alt="Foto Kepala Sekolah" class="photo" />
-        </div> -->
-        <!-- Teks sambutan -->
-        <!-- <div class="text-container">
-          <header class="sambutan-header">
-            <h1>CAI TEPI SAWAH</h1>
-            <h3>UPTD PSDA WS CITANDUY DINAS SUMBER DAYA AIR PROVINSI JAWA BARAT</h3>
-          </header>
-          <p>
-            Capaian Informasi terkait Pengolahan Irigasi pada Wilayah Sungai Citanduy
-          </p>
-        </div>
-      </div>
-    </section> -->
     <div id="profil" class="container">
           <div class="section">
               <h2>Profile</h2>
