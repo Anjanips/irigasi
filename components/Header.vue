@@ -53,6 +53,8 @@
             <li><a class="dropdown-item" href="/alokasi/gnputri2">GUNUNGPUTRI</a></li>
             <li><a class="dropdown-item" href="/alokasi/cikembang2">CIKEMBANG</a></li>
             <li><a class="dropdown-item" href="/alokasi/wd">WANGUNDIREJA</a></li>
+            <li><a class="dropdown-item" href="/alokasi/chaji">CIPUTRAHAJI</a></li>
+           
           </ul>
           </li>
           <li class="nav-item">

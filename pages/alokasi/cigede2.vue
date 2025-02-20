@@ -1,10 +1,15 @@
+<script setup lang="ts">
+import { NuxtLink } from '#components';
+
+</script>
+
 <template>
   <div class="judul m-5 text-center">
     <h2>DI CIGEDE KAB/KOTA TASIKMALAYA </h2>
-    <h3>PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025</h3>
+    <h3>PERIODE: FEBRUARI 2025</h3>
   </div>
   <div class="table-container">
-
+    <button type="button" class="btn btn-outline-info">Edit</button>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -12,7 +17,8 @@
           <th scope="col">Nama Petak Tersier</th>
           <th scope="col">Luas Areal (ha)</th>
           <th scope="col">Realisasi Areal</th>
-          <th scope="col">Februari 2025, Minggu Ke 1</th>
+          <th scope="col">Minggu Ke 1</th>
+          <th scope="col">Minggu Ke 2</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +28,7 @@
           <td>27.00</td>
           <td>27.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">2</th>
@@ -29,6 +36,7 @@
           <td>59.00</td>
           <td>59.00</td>
           <td>0.06</td>
+          <td>0.04</td>
         </tr>
         <tr>
           <th scope="row">3</th>
@@ -36,12 +44,14 @@
           <td>101.00</td>
           <td>101.00</td>
           <td>0.10</td>
+          <td>0.07</td>
         </tr>
         <tr>
           <th scope="row">4</th>
           <td>BCG 4 Ka</td>
           <td>14.00</td>
           <td>14.00</td>
+          <td>0.01</td>
           <td>0.01</td>
         </tr>
         <tr>
@@ -50,6 +60,7 @@
           <td>30.00</td>
           <td>30.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">6</th>
@@ -57,6 +68,7 @@
           <td>51.00</td>
           <td>51.00</td>
           <td>0.05</td>
+          <td>0.04</td>
         </tr>
         <tr>
           <th scope="row">7</th>
@@ -64,6 +76,7 @@
           <td>45.00</td>
           <td>45.00</td>
           <td>0.04</td>
+          <td>0.03</td>
         </tr>
         <tr>
           <th scope="row">8</th>
@@ -71,6 +84,7 @@
           <td>53.00</td>
           <td>53.00</td>
           <td>0.05</td>
+          <td>0.04</td>
         </tr>
         <tr>
           <th scope="row">9</th>
@@ -78,6 +92,7 @@
           <td>35.00</td>
           <td>35.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">10</th>
@@ -85,12 +100,14 @@
           <td>0.00</td>
           <td>0.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">11</th>
           <td>BCG 11 Ka</td>
           <td>22.00</td>
           <td>22.00</td>
+          <td>0.00</td>
           <td>0.00</td>
         </tr>
         <tr>
@@ -99,6 +116,7 @@
           <td>24.00</td>
           <td>24.00</td>
           <td>0.02</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">13</th>
@@ -106,6 +124,7 @@
           <td>35.00</td>
           <td>35.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">14</th>
@@ -113,12 +132,14 @@
           <td>26.00</td>
           <td>26.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">15</th>
           <td>BCG 15 Ka</td>
           <td>11.00</td>
           <td>11.00</td>
+          <td>0.01</td>
           <td>0.01</td>
         </tr>
         <tr>
@@ -127,6 +148,7 @@
           <td>9.00</td>
           <td>9.00</td>
           <td>0.01</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row"></th>
@@ -134,10 +156,12 @@
           <td>542.00</td>
           <td>542.00</td>
           <td>0.543</td>
+          <td>0.38</td>
         </tr>
       </tbody>
     </table>
   </div>
+  <NuxtLink ></NuxtLink>
 </template>
 
 <style scoped>
@@ -158,5 +182,9 @@
 .table th {
   padding: 0.5rem;
   vertical-align: middle;
+}
+.btn {
+    margin-left: 0%;
+
 }
 </style>

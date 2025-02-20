@@ -3,6 +3,7 @@
         <h1>REALISASI TANAM </h1>
         <h2>Periode Tanggal 1 Februari s/d 15 Februari 2025</h2>
     </div>
+    <button type="button" class="btn btn-outline-info">Edit</button>
     <div class="table-container">
         <table class="table table-bordered p-5">
             <thead>
@@ -211,5 +212,9 @@
 .table th {
     padding: 0.5rem;
     vertical-align: middle;
+}
+.btn {
+    margin-left: 5%;
+
 }
 </style>

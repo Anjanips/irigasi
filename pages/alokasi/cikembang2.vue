@@ -1,8 +1,9 @@
 <template>
   <div class="judul m-5 text-center">
     <h2>DI CIKEMBANG KAB CIAMIS DAN KOTA BANJAR </h2>
-    <h3>PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025</h3>
+    <h3>PERIODE: FEBRUARI 2025</h3>
   </div>
+  <button type="button" class="btn btn-outline-info">Edit</button>
   <div class="table-container">
     <table class="table table-bordered">
       <thead>
@@ -11,7 +12,8 @@
           <th scope="col">Nama Petak Tersier</th>
           <th scope="col">Luas Areal (ha)</th>
           <th scope="col">Realisasi Areal</th>
-          <th scope="col">Februari 2025, Minggu Ke 1</th>
+          <th scope="col">Minggu Ke 1</th>
+          <th scope="col">Minggu Ke 2</th>
         </tr>
       </thead>
       <tbody>
@@ -21,12 +23,14 @@
           <td>8.00</td>
           <td>8.00</td>
           <td>0.01</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>BCKn 2</td>
           <td>20.00</td>
           <td>20.00</td>
+          <td>0.02</td>
           <td>0.02</td>
         </tr>
         <tr>
@@ -35,12 +39,14 @@
           <td>4.00</td>
           <td>4.00</td>
           <td>0.00</td>
+          <td>0.00</td>
         </tr>
         <tr>
           <th scope="row">4</th>
           <td>BCKn 4</td>
           <td>5.00</td>
           <td>5.00</td>
+          <td>0.00</td>
           <td>0.00</td>
         </tr>
         <tr>
@@ -49,12 +55,14 @@
           <td>7.00</td>
           <td>7.00</td>
           <td>0.01</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row">6</th>
           <td>BCKn 6</td>
           <td>10.00</td>
           <td>10.00</td>
+          <td>0.01</td>
           <td>0.01</td>
         </tr>
         <tr>
@@ -63,12 +71,14 @@
           <td>24.00</td>
           <td>24.00</td>
           <td>0.02</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">8</th>
           <td>BCKn 8</td>
           <td>4.25</td>
           <td>4.25</td>
+          <td>0.00</td>
           <td>0.00</td>
         </tr>
         <tr>
@@ -77,12 +87,14 @@
           <td>7.25</td>
           <td>7.25</td>
           <td>0.01</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row">10</th>
           <td>BCKn 10</td>
           <td>34.25</td>
           <td>34.25</td>
+          <td>0.03</td>
           <td>0.03</td>
         </tr>
         <tr>
@@ -91,6 +103,7 @@
           <td>12.00</td>
           <td>12.00</td>
           <td>0.01</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row">12</th>
@@ -98,6 +111,7 @@
           <td>69.50</td>
           <td>69.50</td>
           <td>0.07</td>
+          <td>0.06</td>
         </tr>
         <tr>
           <th scope="row">13</th>
@@ -105,12 +119,14 @@
           <td>75.00</td>
           <td>75.00</td>
           <td>0.07</td>
+          <td>0.06</td>
         </tr>
         <tr>
           <th scope="row">14</th>
           <td>BCKr 1</td>
           <td>3.25</td>
           <td>3.25</td>
+          <td>0.00</td>
           <td>0.00</td>
         </tr>
         <tr>
@@ -119,6 +135,7 @@
           <td>4.00</td>
           <td>4.00</td>
           <td>0.00</td>
+          <td>0.00</td>
         </tr>
         <tr>
           <th scope="row">16</th>
@@ -126,6 +143,7 @@
           <td>16.00</td>
           <td>16.00</td>
           <td>0.02</td>
+          <td>0.01</td>
         </tr>
         <tr>
           <th scope="row">17</th>
@@ -133,6 +151,7 @@
           <td>39.25</td>
           <td>39.25</td>
           <td>0.04</td>
+          <td>0.03</td>
         </tr>
         <tr>
           <th scope="row">18</th>
@@ -140,12 +159,14 @@
           <td>5.50</td>
           <td>5.50</td>
           <td>0.01</td>
+          <td>0.00</td>
         </tr>
         <tr>
           <th scope="row">19</th>
           <td>BCKr 6</td>
           <td>31.50</td>
           <td>31.50</td>
+          <td>0.03</td>
           <td>0.03</td>
         </tr>
         <tr>
@@ -154,6 +175,7 @@
           <td>26.50</td>
           <td>26.50</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">21</th>
@@ -161,6 +183,7 @@
           <td>39.00</td>
           <td>39.00</td>
           <td>0.04</td>
+          <td>0.03</td>
         </tr>
         <tr>
           <th scope="row">22</th>
@@ -168,6 +191,7 @@
           <td>65.50</td>
           <td>65.50</td>
           <td>0.06</td>
+          <td>0.05</td>
         </tr>
         <tr>
           <th scope="row">23</th>
@@ -175,6 +199,7 @@
           <td>29.00</td>
           <td>29.00</td>
           <td>0.03</td>
+          <td>0.02</td>
         </tr>
         <tr>
           <th scope="row">24</th>
@@ -182,6 +207,7 @@
           <td>113.25</td>
           <td>113.25</td>
           <td>0.11</td>
+          <td>0.09</td>
         </tr>
         <tr>
           <th scope="row"></th>
@@ -189,6 +215,7 @@
           <td>653.00</td>
           <td>653.00</td>
           <td>0.639</td>
+          <td>0.53</td>
         </tr>
       </tbody>
     </table>
@@ -213,5 +240,9 @@
 .table th {
   padding: 0.5rem;
   vertical-align: middle;
+}
+.btn {
+    margin-left: 5%;
+
 }
 </style>
