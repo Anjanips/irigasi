@@ -1,9 +1,47 @@
+<script setup>
+useHead({
+    title: "Tanam",
+    meta: [
+        {
+            name: "description",
+            content: "Tanam",
+        },
+    ],
+});
+
+const supabase = useSupabaseClient();
+const visitors = ref([]);
+
+
+// Fungsi untuk mengambil data tanam dari Supabase
+const getTanam = async () => {
+    const { data, error } = await supabase.from("tanam").select("*");
+    if (data) {
+        // Menambahkan URL gambar ke setiap visitor
+        visitors.value = data.map(visitor => {
+            const imageUrl = supabase.storage
+                .from('img')
+                .getPublicUrl(visitor.img);
+
+            return { ...visitor, imgUrl: imageUrl.data.publicUrl };
+        });
+    } else {
+        console.error('Error fetching tanam data:', error);
+    }
+};
+
+
+onMounted(() => {
+    getTanam();
+});
+</script>
+
+
 <template>
     <div class="judul m-5 text-center">
         <h1>REALISASI TANAM </h1>
         <h2>Periode Tanggal 1 Februari s/d 15 Februari 2025</h2>
     </div>
-    <button type="button" class="btn btn-outline-info">Edit</button>
     <div class="table-container">
         <table class="table table-bordered p-5">
             <thead>
@@ -25,169 +63,23 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="assets/img/cimulu(1).jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Cimulu</td>
-                    <td>1.546,2</td>
-                    <td>1=cukup</td>
-                    <td>130,39</td>
-                    <td>1.271,38</td>
-                    <td>130,03</td>
-                    <td>-</td>
-                    <td>14,40</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
+                <tr v-for="(visitor, i) in visitors" :key="i">
+                    <th scope="row">{{ i + 1 }}.</th>
+                    <td><img :src="visitor.img" alt="Visitor Image" width="100" height="100" /></td>
+                    <td>{{ visitor.nama_bendung }}</td>
+                    <td>{{ visitor.luas_layanan }}</td>
+                    <td>{{ visitor.faktork }}</td>
+                    <td>{{ visitor.pengolahan }}</td>
+                    <td>{{ visitor.pertumbuhan }}</td>
+                    <td>{{ visitor.panen }}</td>
+                    <td>{{ visitor.palawija }}</td>
+                    <td>{{ visitor.bera }}</td>
+                    <td>{{ visitor.kekeringan }}</td>
+                    <td>{{ visitor.banjir }}</td>
+                    <td>{{ visitor.puso }}</td>
+                    <td>{{ visitor.mt }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td><img src="assets/img/cigede(1).jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Cigede</td>
-                    <td>542</td>
-                    <td>1=cukup</td>
-                    <td>1,80</td>
-                    <td>442,80</td>
-                    <td>16,40</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
 
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td><img src="assets/img/muhara.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Muhara</td>
-                    <td>542</td>
-                    <td>1=cukup</td>
-                    <td>1,80</td>
-                    <td>442,80</td>
-                    <td>16,40</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td><img src="assets/img/baranangsiang(1).jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Baranangsiang</td>
-                    <td>182,77</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>182,77</td>
-                    <td>16,40</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td><img src="assets/img/cikembang(1).jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Cikembang</td>
-                    <td>653</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>182,77</td>
-                    <td></td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td><img src="assets/img/ciputrahaji.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Ciputrahaji</td>
-                    <td>1.258,10</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>1.258,10</td>
-                    <td></td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td><img src="assets/img/0_B. GPI 0-Bendung Gunung Putri.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Gunung Putri</td>
-                    <td>469,63</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>469,63</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td><img src="assets/img/wd.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Wangundireja</td>
-                    <td>217</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>162,60</td>
-                    <td>-</td>
-                    <td>10,85</td>
-                    <td>43,55</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Okt '2024</td>
-                </tr>
-                <tr>
-                    <th scope="row">9</th>
-                    <td><img src="assets/img/laksanaharja2.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Laksanaharja</td>
-                    <td>274,50</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>274,50</td>
-                    <td>-</td>
-                    <td>10,85</td>
-                    <td>43,55</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-                </tr>
-                <tr>
-                    <th scope="row">10</th>
-                    <td><img src="assets/img/parakanhaji2.jpg" width="30%" height="auto" alt=""></td>
-                    <td>Di Parakanhaji</td>
-                    <td>127</td>
-                    <td>1=cukup</td>
-                    <td>-</td>
-                    <td>60</td>
-                    <td>-</td>
-                    <td>67</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Nov '2024</td>
-                </tr>
             </tbody>
         </table>
     </div>
@@ -213,6 +105,7 @@
     padding: 0.5rem;
     vertical-align: middle;
 }
+
 .btn {
     margin-left: 5%;
 

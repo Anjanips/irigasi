@@ -1,9 +1,61 @@
+<script setup>
+useHead({
+  title: "Alokasi",
+  meta: [
+    {
+      name: "description",
+      content: "Alokasi",
+    },
+  ],
+});
+
+const supabase = useSupabaseClient();
+const visitors = ref([]);
+const periodeData = ref([]);
+
+
+// Fungsi untuk mengambil data alokasi
+const getAlokasi = async () => {
+  const { data } = await supabase.from("alokasi_cikembang").select("*").order("id", { ascending: true });
+  if (data) {
+    visitors.value = data;
+  }
+};
+
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+
+  const { data, error } = await supabase.from("periode").select("*")
+  if (data) {
+    periodeData.value = data;
+  };
+};
+
+
+// Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
+const calculateTotal = () => {
+  const totalLuas = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.luas_areal || 0), 0);
+  const totalRealisasi = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.realisasi || 0), 0);
+  const totalMingguKe1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke1 || 0), 0);
+  const totalMingguKe2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke2 || 0), 0);
+
+  return { totalLuas, totalRealisasi, totalMingguKe1, totalMingguKe2 };
+};
+
+onMounted(() => {
+  getAlokasi();
+  getPeriode();
+});
+</script>
+
 <template>
   <div class="judul m-5 text-center">
     <h2>DI CIKEMBANG KAB CIAMIS DAN KOTA BANJAR </h2>
-    <h3>PERIODE: FEBRUARI 2025</h3>
+    <div v-for="(periode, i) in periodeData" :key="i">
+      <h3>{{ periode.judul }}</h3>
+    </div>
   </div>
-  <button type="button" class="btn btn-outline-info">Edit</button>
+
   <div class="table-container">
     <table class="table table-bordered">
       <thead>
@@ -17,205 +69,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>BCKn 1</td>
-          <td>8.00</td>
-          <td>8.00</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>BCKn 2</td>
-          <td>20.00</td>
-          <td>20.00</td>
-          <td>0.02</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>BCKn 3</td>
-          <td>4.00</td>
-          <td>4.00</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>BCKn 4</td>
-          <td>5.00</td>
-          <td>5.00</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>BCKn 5</td>
-          <td>7.00</td>
-          <td>7.00</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>BCKn 6</td>
-          <td>10.00</td>
-          <td>10.00</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>BCKn 7</td>
-          <td>24.00</td>
-          <td>24.00</td>
-          <td>0.02</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>BCKn 8</td>
-          <td>4.25</td>
-          <td>4.25</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>BCKn 9</td>
-          <td>7.25</td>
-          <td>7.25</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>BCKn 10</td>
-          <td>34.25</td>
-          <td>34.25</td>
-          <td>0.03</td>
-          <td>0.03</td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td>BCKn 11</td>
-          <td>12.00</td>
-          <td>12.00</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">12</th>
-          <td>BCKn 12</td>
-          <td>69.50</td>
-          <td>69.50</td>
-          <td>0.07</td>
-          <td>0.06</td>
-        </tr>
-        <tr>
-          <th scope="row">13</th>
-          <td>BCKn 13</td>
-          <td>75.00</td>
-          <td>75.00</td>
-          <td>0.07</td>
-          <td>0.06</td>
-        </tr>
-        <tr>
-          <th scope="row">14</th>
-          <td>BCKr 1</td>
-          <td>3.25</td>
-          <td>3.25</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">15</th>
-          <td>BCKr 2</td>
-          <td>4.00</td>
-          <td>4.00</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">16</th>
-          <td>BCKr 3</td>
-          <td>16.00</td>
-          <td>16.00</td>
-          <td>0.02</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">17</th>
-          <td>BCKr 4</td>
-          <td>39.25</td>
-          <td>39.25</td>
-          <td>0.04</td>
-          <td>0.03</td>
-        </tr>
-        <tr>
-          <th scope="row">18</th>
-          <td>BCKr 5</td>
-          <td>5.50</td>
-          <td>5.50</td>
-          <td>0.01</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">19</th>
-          <td>BCKr 6</td>
-          <td>31.50</td>
-          <td>31.50</td>
-          <td>0.03</td>
-          <td>0.03</td>
-        </tr>
-        <tr>
-          <th scope="row">20</th>
-          <td>BCKr 7</td>
-          <td>26.50</td>
-          <td>26.50</td>
-          <td>0.03</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">21</th>
-          <td>BCKr 8</td>
-          <td>39.00</td>
-          <td>39.00</td>
-          <td>0.04</td>
-          <td>0.03</td>
-        </tr>
-        <tr>
-          <th scope="row">22</th>
-          <td>BCKr 9</td>
-          <td>65.50</td>
-          <td>65.50</td>
-          <td>0.06</td>
-          <td>0.05</td>
-        </tr>
-        <tr>
-          <th scope="row">23</th>
-          <td>BCKr 10</td>
-          <td>29.00</td>
-          <td>29.00</td>
-          <td>0.03</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">24</th>
-          <td>BCKr 11</td>
-          <td>113.25</td>
-          <td>113.25</td>
-          <td>0.11</td>
-          <td>0.09</td>
+        <tr v-for="(visitor, i) in visitors" :key="i">
+          <th scope="row">{{ i + 1 }}.</th>
+          <td>{{ visitor.nama_petak }}</td>
+          <td>{{ visitor.luas_areal }}</td>
+          <td>{{ visitor.realisasi }}</td>
+          <td>{{ visitor.minggu_ke1 }}</td>
+          <td>{{ visitor.minggu_ke2 }}</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td>Jumlah Akhir</td>
-          <td>653.00</td>
-          <td>653.00</td>
-          <td>0.639</td>
-          <td>0.53</td>
+          <td><strong>Jumlah Akhir</strong></td>
+          <td>{{ calculateTotal().totalLuas.toFixed(2) }}</td> <!-- Menampilkan total luas areal -->
+          <td>{{ calculateTotal().totalRealisasi.toFixed(2) }}</td> <!-- Menampilkan total realisasi -->
+          <td>{{ calculateTotal().totalMingguKe1.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-1 -->
+          <td>{{ calculateTotal().totalMingguKe2.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-2 -->
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -241,8 +110,9 @@
   padding: 0.5rem;
   vertical-align: middle;
 }
+
 .btn {
-    margin-left: 5%;
+  margin-left: 5%;
 
 }
 </style>

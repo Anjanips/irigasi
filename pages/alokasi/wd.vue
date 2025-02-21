@@ -1,9 +1,60 @@
+<script setup>
+useHead({
+  title: "Alokasi",
+  meta: [
+    {
+      name: "description",
+      content: "Alokasi",
+    },
+  ],
+});
+
+const supabase = useSupabaseClient();
+const visitors = ref([]);
+const periodeData = ref([]);
+
+
+// Fungsi untuk mengambil data alokasi
+const getAlokasi = async () => {
+  const { data } = await supabase.from("alokasi_wd").select("*").order("id", { ascending: true });
+  if (data) {
+    visitors.value = data;
+  }
+};
+
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+
+  const { data, error } = await supabase.from("periode").select("*")
+  if (data) {
+    periodeData.value = data;
+  };
+};
+
+
+// Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
+const calculateTotal = () => {
+  const totalLuas = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.luas_areal || 0), 0);
+  const totalRealisasi = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.realisasi || 0), 0);
+  const totalMingguKe1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke1 || 0), 0);
+  const totalMingguKe2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke2 || 0), 0);
+
+  return { totalLuas, totalRealisasi, totalMingguKe1, totalMingguKe2 };
+};
+
+onMounted(() => {
+  getAlokasi();
+  getPeriode();
+});
+</script>
+
 <template>
   <div class="judul m-5 text-center">
     <h2>DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</h2>
-    <h3>PERIODE: FEBRUARI 2025</h3>
+    <div v-for="(periode, i) in periodeData" :key="i">
+      <h3>{{ periode.judul }}</h3>
+    </div>
   </div>
-  <button type="button" class="btn btn-outline-info">Edit</button>
   <div class="table-container">
     <table class="table table-bordered">
       <thead>
@@ -17,141 +68,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>BWD 1 Ka</td>
-          <td>7.62</td>
-          <td>7.62</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>BWD 2 Ki</td>
-          <td>4.75</td>
-          <td>4.75</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>BWD 3 Ka</td>
-          <td>21.25</td>
-          <td>21.25</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>BWD 3 Ki</td>
-          <td>3.13</td>
-          <td>3.13</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>BWD 4 Ki</td>
-          <td>16.69</td>
-          <td>16.69</td>
-          <td>0.02</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>BWD 5 Ka</td>
-          <td>2.16</td>
-          <td>2.16</td>
-          <td>0.00</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>BWD 6 Ka</td>
-          <td>5.18</td>
-          <td>5.18</td>
-          <td>0.01</td>
-          <td>0.00</td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>BWD 7 Ki</td>
-          <td>10.21</td>
-          <td>10.21</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>BWD 8 Ka</td>
-          <td>6.76</td>
-          <td>6.76</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>BWD 9 Ki</td>
-          <td>5.97</td>
-          <td>5.97</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td>BWD 10 Ka</td>
-          <td>23.70</td>
-          <td>23.70</td>
-          <td>0.02</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">12</th>
-          <td>BWD 10 Ki</td>
-          <td>44.17</td>
-          <td>44.17</td>
-          <td>0.04</td>
-          <td>0.04</td>
-        </tr>
-        <tr>
-          <th scope="row">13</th>
-          <td>BWD 11 Ki</td>
-          <td>21.44</td>
-          <td>21.44</td>
-          <td>0.02</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">14</th>
-          <td>BWD 12 Ki</td>
-          <td>8.90</td>
-          <td>8.90</td>
-          <td>0.01</td>
-          <td>0.01</td>
-        </tr>
-        <tr>
-          <th scope="row">15</th>
-          <td>BWD 13 Ka</td>
-          <td>20.63</td>
-          <td>20.63</td>
-          <td>0.02</td>
-          <td>0.02</td>
-        </tr>
-        <tr>
-          <th scope="row">16</th>
-          <td>BWD 13 Ki</td>
-          <td>14.46</td>
-          <td>14.46</td>
-          <td>0.01</td>
-          <td>0.01</td>
+        <tr v-for="(visitor, i) in visitors" :key="i">
+          <th scope="row">{{ i + 1 }}.</th>
+          <td>{{ visitor.nama_petak }}</td>
+          <td>{{ visitor.luas_areal }}</td>
+          <td>{{ visitor.realisasi }}</td>
+          <td>{{ visitor.minggu_ke1 }}</td>
+          <td>{{ visitor.minggu_ke2 }}</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td>Jumlah Akhir</td>
-          <td>217.00</td>
-          <td>217.00</td>
-          <td>0.195</td>
-          <td>0.17</td>
+          <td><strong>Jumlah Akhir</strong></td>
+          <td>{{ calculateTotal().totalLuas.toFixed(2) }}</td> <!-- Menampilkan total luas areal -->
+          <td>{{ calculateTotal().totalRealisasi.toFixed(2) }}</td> <!-- Menampilkan total realisasi -->
+          <td>{{ calculateTotal().totalMingguKe1.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-1 -->
+          <td>{{ calculateTotal().totalMingguKe2.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-2 -->
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -177,8 +109,9 @@
   padding: 0.5rem;
   vertical-align: middle;
 }
+
 .btn {
-    margin-left: 5%;
+  margin-left: 5%;
 
 }
 </style>
