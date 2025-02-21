@@ -11,6 +11,16 @@ useHead({
 
 const supabase = useSupabaseClient();
 const visitors = ref([]);
+const periodeData = ref([]);
+
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+
+    const { data, error } = await supabase.from("periode").select("*")
+    if (data) {
+        periodeData.value = data;
+    };
+};
 
 
 // Fungsi untuk mengambil data tanam dari Supabase
@@ -33,6 +43,7 @@ const getTanam = async () => {
 
 onMounted(() => {
     getTanam();
+    getPeriode();
 });
 </script>
 
@@ -40,7 +51,9 @@ onMounted(() => {
 <template>
     <div class="judul m-5 text-center">
         <h1>REALISASI TANAM </h1>
-        <h2>Periode Tanggal 1 Februari s/d 15 Februari 2025</h2>
+        <div v-for="(periode, i) in periodeData" :key="i">
+            <h3>{{ periode.judul }}</h3>
+        </div>
     </div>
     <div class="table-container">
         <table class="table table-bordered p-5">
