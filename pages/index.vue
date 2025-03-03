@@ -61,9 +61,9 @@
     </div>
     <div id="profil" class="container">
           <div class="section">
-              <h2>Profile</h2>
-              <h3>SEKSI IRIGASI CITANDUY</h3>
-              <h3>Misi</h3>
+              <h2>CAI TEPI SAWAH</h2>
+              <h3>CAPAIAN INFORMASI TERKAIT PENGELOLAAN IRIGASI SATUAN WILAYAH UPTD PSDA CITANDUY DINAS SUMBER DAYA AIR PROVINSI JAWA BARAT</h3>
+              <!-- <h3>Misi</h3>
               <ul class="list-group-numbered">
                   <li class="list-group-item">Menyiapkan Sumber Daya Manusia yang cerdas dan kompeten baik hardskill maupun softskill.</li>
                   <li class="list-group-item">Meningkatkan dan mengembangkan aktifitas serta kreatifitas seluruh warga sekolah dalam berbagai kegiatan positif.</li>
@@ -74,7 +74,7 @@
                   <li class="list-group-item">Membangun jiwa wirausaha yang handal melalui pembelajaran Teaching Factory (TEFA) dan Kelas Industri.</li>
                   <li class="list-group-item">Menjalin dan mengembangkan kemitraan dengan Industri dan Dunia Kerja (IDUKA) serta lembaga lainnya yang relevan.</li>
                   <li class="list-group-item">Menanamkan dan membudayakan sikap dan perilaku yang baik pada aktivitas di sekolah maupun dalam kehidupan sehari-hari.</li>
-              </ul>
+              </ul> -->
           </div>
       </div>
   
