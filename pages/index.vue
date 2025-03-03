@@ -61,8 +61,8 @@
     </div>
     <div id="profil" class="container">
           <div class="section">
-              <h3>CAI TEPI SAWAH</h3>
-              <h4>CAPAIAN INFORMASI TERKAIT PENGELOLAAN IRIGASI SATUAN WILAYAH UPTD PSDA WS CITANDUY DINAS SUMBER DAYA AIR PROVINSI JAWA BARAT</h4>
+              <h2 class="p-3">CAI TEPI SAWAH</h2>
+              <h4 class="text-center">CAPAIAN INFORMASI TERKAIT PENGELOLAAN IRIGASI SATUAN WILAYAH UPTD PSDA WS CITANDUY DINAS SUMBER DAYA AIR PROVINSI JAWA BARAT</h4>
               <h5>Maksud</h5>
               <ul class="list-group-numbered">
                   <li class="list-group-item">Menginformasikan petunjuk kegiatan operasi jaringan irigasi</li>
