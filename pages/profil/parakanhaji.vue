@@ -42,10 +42,10 @@
                 </div>
         </div>
         <div class="card mb-3">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="assets/img/Skema jaringan muhara[1].jpg" class="card-img-top" alt="...">
         </div>
         <div class="card mb-3">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="assets/img/Skema jaringan muhara[1].jpg" class="card-img-top" alt="...">
         </div>
   </div>
 </template>
