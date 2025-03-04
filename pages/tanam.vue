@@ -50,7 +50,7 @@ onMounted(() => {
 
 <template>
     <div class="judul m-5 text-center">
-        <h1>REALISASI TANAM </h1>
+        <h1>PEMANTAUAN KONDISI TANAMAN</h1>
         <div v-for="(periode, i) in periodeData" :key="i">
             <h3>{{ periode.judul }}</h3>
         </div>
