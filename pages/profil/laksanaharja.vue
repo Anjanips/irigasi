@@ -33,7 +33,7 @@
               </div>
           </div>
       </div> 
-      <div class="card mb-3">
+        <div class="card mb-3">
             <img src="assets/img/Laksanaharja 2020-09-01 at 07.57.40.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
@@ -42,6 +42,12 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Ratawangi, Desa Sindangjaya, Desa Cicapar, Desa Ciulu Kec. Banjarsari </small></p>
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Mangunjaya, Kec. Mangunjaya </small></p>
                 </div>
-    </div>
+        </div>
+        <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+        </div>
   </div>
 </template>

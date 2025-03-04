@@ -41,5 +41,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Sirnajaya, Kec. Karangjaya </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="..." class="card-img-top" alt="...">
+        </div>
   </div>
 </template>
