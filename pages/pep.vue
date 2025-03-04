@@ -118,3 +118,12 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+
+.img{
+    width: 100px;
+    height: 50px;
+}
+
+</style>
