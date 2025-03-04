@@ -47,7 +47,7 @@
             <img src="assets/img/Cikembang 2020-09-01 at 07.57.38.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
-                        <h3 class="card-text">Daerah Irigasi Muhara Kab Ciamis dan Kota Banjar</h3>
+                        <h3 class="card-text">Daerah Irigasi Cikembang Kab Ciamis dan Kota Banjar</h3>
                         <p class="card-text"><small class="text-body-black">Luas Layanan: 653 (ha)</small></p>
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Bajong Malang, Desa Raksabaya, Desa Cimaragas Kec. Cimaragas </small></p>
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Pasir Nagara, Kec. Pamarican </small></p>
