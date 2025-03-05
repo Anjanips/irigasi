@@ -8,7 +8,6 @@
 .img {
     height: 700px;
     width: 700px;
-    justify-content: center;
     align-items: center;
 }
 </style>
