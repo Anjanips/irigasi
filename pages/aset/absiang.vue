@@ -1,13 +1,5 @@
 <template>
     <div class="card mb-3">
-            <img src="assets/img/abaranangsiang.jpg" class="card-img-top " alt="...">
+            <img src="assets/img/abaranangsiang.jpg" class="card-img-top " alt="..." style="height: 800px; width: 800px;">
         </div>
 </template>
-
-<style scoped>
-.img {
-    height: 700px;
-    width: 700px;
-    align-items: center;
-}
-</style>
