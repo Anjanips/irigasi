@@ -5,15 +5,10 @@
 </template>
 
 <style scoped>
-.img-container {
-    display: flex;
+.img {
+    height: 700px;
+    width: 700px;
     justify-content: center;
     align-items: center;
 }
-
-img {
-    width: 100%;
-    height: 100%;
-}
-
 </style>
