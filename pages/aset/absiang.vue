@@ -9,13 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 </style>
