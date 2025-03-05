@@ -3,7 +3,7 @@
         <h2>PETUNJUK PEMELIHARAAN</h2>
     </div>
     <div class="card text-bg-dark">
-        <img src="assets/img/sc1.jpg" class="card-img" alt="..." style="height: 500px; width: 500px;">
+        <img src="assets/img/sc1.jpg" class="card-img" alt="..." style="height: 900px; width: 900px;">
         <div class="card-img-overlay">
         </div>
     </div>
