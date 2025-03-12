@@ -32,8 +32,7 @@
               <li><a class="dropdown-item" href="/profil/cimulu">DI CIMULU KAB KOTA TASIKMALAYA</a></li>
               <li><a class="dropdown-item" href="/profil/cigede">DI CIGEDE KAB KOTA TASIKMALAYA</a></li>
               <li><a class="dropdown-item" href="/profil/cikembang">DI CIKEMBANG KAB CIAMIS DAN KOTA BANJAR</a></li>
-              <li><a class="dropdown-item" href="/profil/wangundireja">DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</a>
-              </li>
+              <li><a class="dropdown-item" href="/profil/wangundireja">DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</a></li>
               <li><a class="dropdown-item" href="/profil/gunungputri">DI GUNUNGPUTRI KAB CIAMIS DAN KOTA BANJAR</a></li>
               <li><a class="dropdown-item" href="/profil/ciputrahaji">DI CIPUTRAHAJI CIAMIS DAN PANGANDARAN</a></li>
               <li><a class="dropdown-item" href="/profil/laksanaharja">DI LAKSANAHARJA KAB CIAMIS DAN PANGANDARAN</a></li>
@@ -75,14 +74,17 @@
               aria-expanded="false">
               ALOKASI PEMBERIAN AIR
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/alokasi/cimulu2">CIMULU</a></li>
-              <li><a class="dropdown-item" href="/alokasi/cigede2">CIGEDE</a></li>
-              <li><a class="dropdown-item" href="/alokasi/gnputri2">GUNUNGPUTRI</a></li>
-              <li><a class="dropdown-item" href="/alokasi/cikembang2">CIKEMBANG</a></li>
-              <li><a class="dropdown-item" href="/alokasi/wd">WANGUNDIREJA</a></li>
-              <li><a class="dropdown-item" href="/alokasi/ciputrahaji">CIPUTRAHAJI</a></li>
-            </ul>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/alokasi/cimulu2">CIMULU</a></li>
+            <li><a class="dropdown-item" href="/alokasi/cigede2">CIGEDE</a></li>
+            <li><a class="dropdown-item" href="/alokasi/gnputri2">GUNUNGPUTRI</a></li>
+            <li><a class="dropdown-item" href="/alokasi/cikembang2">CIKEMBANG</a></li>
+            <li><a class="dropdown-item" href="/alokasi/wd">WANGUNDIREJA</a></li>
+            <li><a class="dropdown-item" href="/alokasi/chaji">CIPUTRAHAJI</a></li>
+          </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/ip">IP</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/iksi">IKSI</a>
@@ -93,4 +95,6 @@
   </nav>
 
 </template>
-<style scoped></style>
+<style scoped>
+
+</style>
