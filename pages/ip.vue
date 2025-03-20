@@ -88,7 +88,6 @@ onMounted(() => {
           <td>{{ calculateTotal().totalMt2.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 2 -->
           <td>{{ calculateTotal().totalMt3.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 3 -->
           <td>{{ calculateTotal().totalJumlah.toFixed(2) }}</td> <!-- Menampilkan total jumlah -->
-          <td></td>
         </tr>
 
       </tbody>
