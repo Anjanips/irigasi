@@ -12,6 +12,7 @@ useHead({
 const supabase = useSupabaseClient();
 const visitors = ref([]);
 const footerTotals = ref({});
+const periodeData = ref([]);
 
 const getIksi = async () => {
   const { data } = await supabase.from("iksi").select("*");
