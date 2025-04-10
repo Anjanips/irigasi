@@ -18,6 +18,15 @@ const getIksi = async () => {
   if (data) visitors.value = data;
 };
 
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+
+const { data, error } = await supabase.from("periode").select("*")
+if (data) {
+  periodeData.value = data;
+};
+};
+
 const getFooterTotals = async () => {
   const { data, error } = await supabase.from("jml_iksi").select("*").single(); 
   if (data) {
@@ -30,6 +39,7 @@ const getFooterTotals = async () => {
 onMounted(() => {
   getIksi();
   getFooterTotals(); 
+  getPeriode();
 });
 </script>
 
