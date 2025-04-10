@@ -52,7 +52,7 @@ onMounted(() => {
 
 <template>
   <div class="judul m-5 text-center">
-    <h2>INDEK PERTAHANAN(IP)</h2>
+    <h2>INDEK PERTANAMAN (IP)</h2>
     <div v-for="(periode, i) in periodeData" :key="i">
       <h3>{{ periode.judul }}</h3>
     </div>
