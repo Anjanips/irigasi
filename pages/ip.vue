@@ -52,7 +52,7 @@ onMounted(() => {
 
 <template>
   <div class="judul m-5 text-center">
-    <h2>DI CIMULU KAB/KOTA TASIKMALAYA </h2>
+    <h2>INDEK PERTAHANAN(IP)</h2>
     <div v-for="(periode, i) in periodeData" :key="i">
       <h3>{{ periode.judul }}</h3>
     </div>
@@ -78,11 +78,10 @@ onMounted(() => {
           <td>{{ visitor.mt_2 }}</td>
           <td>{{ visitor.mt_3 }}</td>
           <td>{{ visitor.jumlah }}</td>
-
         </tr>
         <tr>
           <th scope="row"></th>
-          <td><strong>Jumlah Akhir</strong></td>
+          <td><strong>Rata-rata</strong></td>
           <td>{{ calculateTotal().totalNamaDi.toFixed(2) }}</td> <!-- Menampilkan total nama di -->
           <td>{{ calculateTotal().totalMt1.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 1 -->
           <td>{{ calculateTotal().totalMt2.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 2 -->
